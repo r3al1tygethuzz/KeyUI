@@ -119,7 +119,9 @@ verifyButton.MouseButton1Click:Connect(function()
         KeyVerified = true
         notify("Key verified!", Color3.fromRGB(0, 255, 0))
         screenGui:Destroy()
-        runAimbot() -- Run aimbot after verification
+         -- Run aimbot after verification
+        if KeyVerified = true then
+                local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/r3al1tygethuzz/UILoad/refs/heads/main/Xenware-UI.lua'))()
     else
         notify("Invalid key or not for your account!", Color3.fromRGB(255, 0, 0))
     end
