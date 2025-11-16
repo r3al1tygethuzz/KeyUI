@@ -1,13 +1,13 @@
 -- ======= CONFIGURATION =======
 local KeySlots = {
-    {Key = "KEY1", Username = "XenLikeThat"}, -- replace KEY1 & Player1
-    {Key = "KEY2", Username = "Au_qrx"}, -- replace KEY2 & Player2
+    {Key = "KEY1", Username = "XenLikeThat"},
+    {Key = "KEY2", Username = "Au_qrx"},
     {Key = "KEY3", Username = "Valhalla3667"},
     {Key = "KEY4", Username = "Water_man409322"},
-    {Key = "KEY4", Username = "M0n3y_M4k3r0"}, -- replace KEY3 & Player3
+    {Key = "KEY5", Username = "M0n3y_M4k3r0"},
 }
 
-local GetKeyLink = "https://discord.gg/PeZDSt7NJG" -- Replace with your link
+local GetKeyLink = "https://discord.gg/PeZDSt7NJG"
 -- ==============================
 
 -- ======= UI CREATION =======
@@ -18,7 +18,6 @@ local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 local screenGui = Instance.new("ScreenGui")
 screenGui.Parent = PlayerGui
 
--- Background frame
 local frame = Instance.new("Frame")
 frame.Size = UDim2.new(0, 400, 0, 250)
 frame.Position = UDim2.new(0.5, -200, 0.5, -125)
@@ -26,10 +25,8 @@ frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 frame.BorderSizePixel = 0
 frame.Parent = screenGui
 
--- Title
 local title = Instance.new("TextLabel")
 title.Size = UDim2.new(1, 0, 0, 50)
-title.Position = UDim2.new(0, 0, 0, 0)
 title.Text = "Key Verification"
 title.TextScaled = true
 title.BackgroundTransparency = 1
@@ -37,7 +34,6 @@ title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.Font = Enum.Font.GothamBold
 title.Parent = frame
 
--- Key Entry Box
 local keyBox = Instance.new("TextBox")
 keyBox.Size = UDim2.new(0.8, 0, 0, 50)
 keyBox.Position = UDim2.new(0.1, 0, 0, 60)
@@ -48,7 +44,6 @@ keyBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 keyBox.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
 keyBox.Parent = frame
 
--- Verify Key Button
 local verifyButton = Instance.new("TextButton")
 verifyButton.Size = UDim2.new(0.35, 0, 0, 50)
 verifyButton.Position = UDim2.new(0.1, 0, 0, 120)
@@ -59,7 +54,6 @@ verifyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 verifyButton.Font = Enum.Font.GothamBold
 verifyButton.Parent = frame
 
--- Get Key Button
 local getKeyButton = Instance.new("TextButton")
 getKeyButton.Size = UDim2.new(0.35, 0, 0, 50)
 getKeyButton.Position = UDim2.new(0.55, 0, 0, 120)
@@ -70,7 +64,6 @@ getKeyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 getKeyButton.Font = Enum.Font.GothamBold
 getKeyButton.Parent = frame
 
--- Notification Label
 local notifyLabel = Instance.new("TextLabel")
 notifyLabel.Size = UDim2.new(1, 0, 0, 30)
 notifyLabel.Position = UDim2.new(0, 0, 0, 190)
@@ -85,7 +78,9 @@ notifyLabel.Parent = frame
 local function notify(msg, color)
     notifyLabel.Text = msg
     notifyLabel.TextColor3 = color or Color3.fromRGB(255, 255, 255)
-    delay(3, function() notifyLabel.Text = "" end)
+    task.delay(3, function()
+        notifyLabel.Text = ""
+    end)
 end
 
 local function copyToClipboard(text)
@@ -93,15 +88,13 @@ local function copyToClipboard(text)
         setclipboard(text)
         notify("Copied link to clipboard!", Color3.fromRGB(0, 255, 0))
     else
-        notify("Cannot copy! Unsupported environment.", Color3.fromRGB(255, 0, 0))
+        notify("Clipboard unsupported!", Color3.fromRGB(255, 0, 0))
     end
 end
 
 getKeyButton.MouseButton1Click:Connect(function()
     copyToClipboard(GetKeyLink)
 end)
-
-local KeyVerified = false
 
 verifyButton.MouseButton1Click:Connect(function()
     local enteredKey = keyBox.Text
@@ -116,13 +109,19 @@ verifyButton.MouseButton1Click:Connect(function()
     end
 
     if valid then
-        KeyVerified = true
         notify("Key verified!", Color3.fromRGB(0, 255, 0))
+
+        task.wait(1)
+
         screenGui:Destroy()
-         -- Run aimbot after verification
-        if KeyVerified = true then
-                local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/r3al1tygethuzz/UILoad/refs/heads/main/Xenware-UI.lua'))()
+
+        -- ======== LOAD RAYFIELD AFTER KEY VERIFIED =========
+        local Rayfield = local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/r3al1tygethuzz/UILoad/refs/heads/main/Xenware-UI.lua'))()
+            
     else
         notify("Invalid key or not for your account!", Color3.fromRGB(255, 0, 0))
     end
 end)
+
+
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/r3al1tygethuzz/UILoad/refs/heads/main/Xenware-UI.lua'))()
