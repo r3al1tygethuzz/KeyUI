@@ -108,7 +108,7 @@ verifyButton.MouseButton1Click:Connect(function()
         end
     end
 
-    if valid then
+    if valid == true then
         notify("Key verified!", Color3.fromRGB(0, 255, 0))
 
         task.wait(1)
