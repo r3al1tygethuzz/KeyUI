@@ -116,12 +116,10 @@ verifyButton.MouseButton1Click:Connect(function()
         screenGui:Destroy()
 
         -- ======== LOAD RAYFIELD AFTER KEY VERIFIED =========
-        local Rayfield = local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/r3al1tygethuzz/UILoad/refs/heads/main/Xenware-UI.lua'))()
+        local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/r3al1tygethuzz/UILoad/refs/heads/main/Xenware-UI.lua'))()
             
     else
         notify("Invalid key or not for your account!", Color3.fromRGB(255, 0, 0))
     end
 end)
 
-
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/r3al1tygethuzz/UILoad/refs/heads/main/Xenware-UI.lua'))()
