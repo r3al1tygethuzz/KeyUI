@@ -1,13 +1,9 @@
 -- ======= CONFIGURATION =======
 local KeySlots = {
-    {Key = "KEY1", Username = "XenLikeThat"},
-    {Key = "KEY2", Username = "Au_qrx"},
-    {Key = "KEY3", Username = "Valhalla3667"},
-    {Key = "KEY4", Username = "Water_man409322"},
-    {Key = "KEY5", Username = "M0n3y_M4k3r0"},
+    {Key = "nil", Username = "nil"},
 }
 
-local GetKeyLink = "https://discord.gg/PeZDSt7NJG"
+local GetKeyLink = "https://discord.gg/hm5UmAyVYq"
 -- ==============================
 
 -- ======= UI CREATION =======
@@ -122,5 +118,3 @@ verifyButton.MouseButton1Click:Connect(function()
         notify("Invalid key or not for your account!", Color3.fromRGB(255, 0, 0))
     end
 end)
-
-https://onecompiler.com/lua/444sdwjam
