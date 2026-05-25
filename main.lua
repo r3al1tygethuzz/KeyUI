@@ -1,6 +1,6 @@
 -- ======= CONFIGURATION =======
 local KeySlots = {
-    {Key = "nil", Username = "nil"},
+    {Key = "Prem", Username = "xNoEffort"},
 }
 
 local GetKeyLink = "https://discord.gg/hm5UmAyVYq"
