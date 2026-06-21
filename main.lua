@@ -2,6 +2,7 @@
 local KeySlots = {
     {Key = "Prem", Username = "xNoEffort"},
     {Key = "crimson", Username = "jasmineworshipss"},
+    {Key = "tommy", Username = "tom_somthing"},
 }
 
 local GetKeyLink = "https://discord.gg/hm5UmAyVYq"
